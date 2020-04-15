@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.part_with_changeling{
+	width: 100%;
+}
+.changeling{
+	margin: 50px auto;
+	width: 240px;
+	height: 400px;
+	border: 2px solid black;
+	position: relative;
+	overflow: hidden;
+}
+.change_item{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.change_item.front {
+	z-index: 100;
+}
+
+.change_item.next {
+	z-index: 50;
+	transform: scale(0, 1);
+}
+
+.change_item img{
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+.change_item img[data-scr]{
+	opacity: 0;
+}
